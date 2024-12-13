@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Contact - TNB Lab</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Basic styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+    }
+
+    header {
+      background-color: #082233; /* Original header color */
+      color: white;
+      padding: 25px;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 30px;
+      font-size: 1.2em;
+    }
+
+    nav ul li a {
+      color: white; /* Text color for links */
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: color 0.3s, border-bottom 0.3s;
+      padding-bottom: 5px;
+    }
+
+    nav ul li a.active {
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      color: #ff9800; /* Change to orange on hover */
+      border-bottom: 2px solid #ff9800; /* Optional: underline effect */
+    }
+
+    /* Main content styles */
+    main {
+      padding: 20px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .contact-header {
+      text-align: center;
+      margin-bottom: 40px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .info-container {
+      display: flex;
+      align-items: center; /* Align items vertically in the center */
+      justify-content: center; /* Center the container */
+      margin-bottom: 40px;
+      font-family: 'Montserrat', sans-serif;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+      padding: 20px;
+      background-color: #ffffff; /* Background for the info box */
+    }
+
+    .info-container img {
+      max-width: 300px; /* Increased width of the image */
+      margin-right: 20px; /* Space between image and text */
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .map-info-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center map and info */
+      margin-bottom: 40px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+      padding: 20px;
+      background-color: white;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 500px;
+      border: 0;
+      margin-bottom: 10px; /* Space between map and other info */
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background-color: #082233; /* Footer color same as header */
+      color: white;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Smooth transition for page changes */
+    * {
+      scroll-behavior: smooth;
+    }
+    .slideshow-container {
+  position: relative;
+  max-width: 300px;
+}
+
+.slideshow-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px; /* Smaller font size for the arrows */
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 50%;
+  width: 30px; /* Reduced width */
+  height: 30px; /* Reduced height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%) scale(1.1);
+}
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Header and Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html" id="home-link">Home</a></li>
+        <li><a href="research.html" id="research-link" class="active">Research</a></li>
+        <li><a href="team.html" id="team-link">Team</a></li>
+        <li><a href="news.html" id="news-link" class="active">News</a></li>
+        <li><a href="gallery.html" id="gallery-link">Gallery</a></li>
+        <li><a href="contact.html" id="contact-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h1 class="contact-header">Contact Us</h1>
+    <p class="contact-header">Feel free to reach out to us or visit our lab at ACTREC:</p>
+
+    <!-- Info Container with Image and Text -->
+    <div class="info-container">
+      <!-- Slideshow Container -->
+      <div class="slideshow-container">
+        <img src="actrec.jpg" class="slideshow-image" alt="ACTREC Image 1"> <!-- First image -->
+        <img src="proton.jpg" class="slideshow-image" alt="ACTREC Image 2" style="display: none;"> <!-- Second image -->
+        
+        <!-- Arrow Buttons -->
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+      </div>
+      <div>
+        <h2>About ACTREC</h2>
+        <p>ACTREC (Advanced Centre for Treatment, Research and Education in Cancer) is a premier cancer research center.</p>
+        <p>We welcome visitors and collaborators to explore our facilities and initiatives.</p>
+      </div>
+    </div>
+    
+
+    <!-- Combined Map and Contact Information -->
+    <div class="map-info-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.7030130471595!2d73.06174755032899!3d19.045243093208103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bd436f720fd3%3A0x8410cfe40fca4fdb!2sACTREC%2C%20Tata%20Memorial%20Centre!5e0!3m2!1sen!2sin!4v1698258314904!5m2!1sen!2sin" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      <p>Email: p00jasandbhor@gmail.com</p>
+      <p>Lab Location: Proton therapy Centre, ACTREC, Navi Mumbai</p>
+      <a href="https://www.google.com/maps/place/ACTREC,+Tata+Memorial+Centre/@19.045243,73.0617475,16z" target="_blank">
+        View larger map
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 TNB LAB. All rights reserved.</p>
+  </footer>
+<script>
+  let currentSlide = 0;
+const slides = document.querySelectorAll('.slideshow-image');
+
+function changeSlide(n) {
+  slides[currentSlide].style.display = 'none';
+  currentSlide = (currentSlide + n + slides.length) % slides.length;
+  slides[currentSlide].style.display = 'block';
+}
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

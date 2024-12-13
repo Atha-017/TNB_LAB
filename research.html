@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research - TNB Lab</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+    }
+
+    header {
+      background-color: #082233;
+      color: white;
+      padding: 25px;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 30px;
+      font-size: 1.2em;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
+
+    main {
+      padding: 20px;
+      text-align: left;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background-color: #082233;
+      color: white;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .research-container {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 30px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .research-image {
+      height: 280px;
+      margin-right: 20px;
+      border-radius: 8px;
+      transition: transform 0.2s ease;
+      width: 17.5%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .research-image:hover {
+      transform: scale(1.02);
+    }
+
+    .research-content {
+      text-align: left;
+      flex-grow: 1; /* Allow content to take remaining space */
+    } 
+
+    .research-content h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8em;
+      margin: 0 0 10px;
+      color: #082233;
+      text-align: left;
+    }
+
+    .research-content h2 a {
+      color: #082233;
+      text-decoration: none;
+      text-align: left;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .research-content h2 a:hover {
+      text-decoration: underline;
+    }
+
+    .research-content p {
+      font-size: 1em;
+      line-height: 1.6;
+      text-align: left;
+      margin: 0; /* Ensures alignment with heading */
+      padding-left: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .additional-info {
+      display: none; /* Initially hidden */
+      margin-top: 10px;
+    }
+
+    .read-more-btn {
+      margin-top: 10px;
+      cursor: pointer;
+      color: #007bff;
+      text-decoration: underline;
+      border: none;
+      background: none;
+      padding: 0;
+      font-size: 1em;
+      text-align: left;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two columns */
+      gap: 10px; /* Space between images */
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .additional-info img {
+    width:90%; /* Full width of the grid cell */
+    height: 320px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensures the image covers the entire area without distortion */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .additional-info .img_g {
+    width:60%; /* Full width of the grid cell */
+    height: 300px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensures the image covers the entire area without distortion */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 0.5px; /* Very low horizontal gap between images */
+    }
+    
+  </style>
+</head>
+<body>
+
+  <!-- Header and Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html" id="home-link">Home</a></li>
+        <li><a href="research.html" id="research-link" class="active">Research</a></li>
+        <li><a href="team.html" id="team-link">Team</a></li>
+        <li><a href="news.html" id="news-link">News</a></li>
+        <li><a href="gallery.html" id="gallery-link">Gallery</a></li>
+        <li><a href="contact.html" id="contact-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h1>Our Research Projects</h1>
+    <p>Explore our innovative research topics and contributions in biomedical sciences.</p>
+
+    <!-- Research Container 1 -->
+    <div class="research-container">
+      <img src="nano_1.jpg" alt="Translational Nanotherapeutics" class="research-image">
+      <div class="research-content">
+        <h2><a href="research.html" target="_blank">Translational Nanotherapeutics</a></h2>
+        <p>Our research in translational nanotherapeutics aims to develop innovative nanoparticle-based drug delivery systems that enhance the efficacy and specificity of cancer therapies.
+        By leveraging the unique properties of nanomaterials, we seek to improve therapeutic outcomes while minimizing systemic side effects.
+        Our multidisciplinary approach integrates nanotechnology and molecular biology, allowing us to design tailored formulations that target tumor cells and the tumor microenvironment effectively.</p>
+        <button class="read-more-btn" onclick="toggleInfo(this)">Read More</button>
+        <div class="additional-info">
+          <p>
+            Through the development of these targeted nanosystems, we are also exploring the potential of stimuli-responsive nanocarriers, which release drugs in response to specific environmental triggers,
+            such as pH or enzyme levels within tumors. Additionally, we are investigating how nanoparticle engineering can enhance the delivery of combination therapies, optimizing the synergy between drugs 
+            and making treatment even more effective. By focusing on precision and safety, our work in nanotherapeutics aims to set new standards in personalized cancer care and treatment efficacy.
+          </p>
+          <p>
+            <br>The accompanying images highlight some of the advanced techniques and outcomes of our research:<br>
+    <b>1.Nanostructure Imaging:</b> The electron microscopy images on the left showcase the intricate nanostructures in injectable gel system developed in our lab.
+    These structures are engineered to provide optimal stability and drug encapsulation efficiency, ensuring controlled and targeted release. Through this patented technology, we aim to provide minimally invasive and cost affordable treatment against high-grade gliomas.  <br>
+    <b>2.Blood-Brain Barrier Delivery:</b> The middle and right panels illustrate our success in achieving drug delivery across the blood-brain barrier (BBB),
+    a significant challenge in treating brain cancers. Using specially formulated nanoplatforms, we've demonstrated that our system can effectively cross the BBB
+    and deliver therapeutic agents directly to the brain, as seen in the imaging studies one hour post-injection (1h PI). The NIR image scan indicates high levels of nanocarrier accumulation in the targeted brain tumor regions, confirming the efficacy of our delivery approach.<br>
+    <b>3.Injectable system:</b> Our patented lipid nanovesicle in gel system, shown in the image, represents a breakthrough in localized delivery for sustained release.
+    By embedding these nanovesicles within a tunable gel matrix, we can enhance their regional delivery potential and minimize off-target tissue damage.
+         </p>
+          <div class="image-grid">
+            <img src="tn_1.jpg" alt="Image 1">
+            <img src="tn_2.jpg" alt="Image 2">
+            <img src="tn_3.jpg" alt="Image 3">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Research Container 2 -->
+    <div class="research-container">
+      <img src="imo.jpg" alt="Immunotherapy" class="research-image">
+      <div class="research-content">
+        <h2><a href="research.html" target="_blank">Immunotherapy</a></h2>
+        <p>We are dedicated to advancing the field of cancer immunotherapy through the exploration of novel strategies that activate and harness the immune system to combat malignancies. 
+            Our lab investigates the interplay between nanoparticles and immune cells to develop synergistic treatments that enhance antitumor responses. This includes studying immune checkpoint inhibitors 
+            and nanovaccines to create more effective and personalized therapeutic options for cancer patients.</p>
+        <button class="read-more-btn" onclick="toggleInfo(this)">Read More</button>
+        <div class="additional-info">
+          <p>
+            Our research focuses on understanding the mechanisms by which nanoparticles can improve the delivery and efficacy of immune-modulating agents. By leveraging the unique properties of nanoparticles,
+             we aim to enhance the uptake of therapeutic agents by immune cells, thereby amplifying the immune response against tumors. We are particularly interested in developing targeted nanovaccines that can
+              stimulate the immune system to recognize and attack cancer cells while minimizing side effects.
+            <br>In addition to our work on nanoparticles, we are exploring the role of the tumor microenvironment in shaping immune responses. By characterizing the immune landscape within tumors, 
+            we aim to identify key factors that promote or inhibit effective antitumor immunity. Our studies include the evaluation of various immune cell populations, such as T cells, dendritic cells, and macrophages, 
+            to understand their interactions with tumor cells and the impact of therapeutic interventions
+          </p>
+          <div class="image-grid">
+            <img src="im_1.jpg" alt="Image 5">
+          </div>
+          <p>In summary, our lab is at the forefront of cancer immunotherapy research, exploring the synergies between nanoparticles and immune cells to develop advanced therapeutic strategies. 
+            We are driven by a passion for improving the lives of cancer patients and are committed to making a meaningful impact in the fight against cancer.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Research Container 3 -->
+    <div class="research-container">
+      <img src="orgnoid.jpg" alt="Precision Engineering Using 3D Organoid Development" class="research-image">
+      <div class="research-content">
+        <h2><a href="research.html" target="_blank">Precision Engineering Using 3D Organoid Development</a></h2>
+        <p>Our precision engineering efforts involve the development of 3D organoid models that closely mimic the architecture and biology of human tumors. These organoids serve as powerful tools for 
+            studying tumor behavior, drug response, and therapeutic resistance. By utilizing patient-derived organoids, we aim to facilitate personalized treatment strategies and identify potential therapeutic 
+            targets that can be validated in vitro and in vivo.</p>
+        <button class="read-more-btn" onclick="toggleInfo(this)">Read More</button>
+        <div class="additional-info">
+          <p>These models allow us to recreate the tumor microenvironment with high fidelity, enabling us to observe cellular interactions and behaviors that are critical for understanding cancer progression.
+             By studying these organoids, we can uncover the mechanisms behind tumor heterogeneity and the varied responses to treatments among patients. This insight is vital for developing targeted therapies that address the unique characteristics of each tumor.
+            <br>Additionally, we are exploring the integration of high-throughput screening technologies with our organoid models, which will significantly accelerate the drug discovery process. 
+            By systematically testing a wide range of compounds, we can identify those that exhibit the most promising efficacy against specific tumor types, paving the way for clinical trials tailored to the individual patient's cancer profile.</p>
+            <p><br><b>3D Organoid platforms to study anti-invasive therapy :</b></p>
+          <div class="image-grid">
+            <img src="3d_org.jpg" alt="Image 13" class="img_g">
+            <img src="3d_org_2.jpg" alt="Image 14" class="img_g">
+            <img src="3d_org1_1.jpg" alt="Image 15" class="img_g">
+            <img src="3d_org1_2.jpg" alt="Image 16" class="img_g">
+          </div>
+            <p><b>3D Organoid models representing early metastasis stages of GBM :</b>
+            </p>
+            <div class="image-grid">
+                <img src="3d_31.jpg" alt="Image 13" class="img_g">
+                <img src="3d_32.jpg" alt="Image 14" class="img_g">
+              </div>
+              <p><b>Growing organoids in organ specific matrix : </b></p>
+              <div class="image-grid">
+                <img src="smat1.jpg" alt="Image 13" class="img_g">
+                <img src="smat2.jpg" alt="Image 14" class="img_g">
+              </div>
+              </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Research Container 4 -->
+    <div class="research-container">
+      <img src="Mouse_m.jpg" alt="Orthotopic Patient-Derived Xenograft Modeling" class="research-image">
+      <div class="research-content">
+        <h2><a href="research.html" target="_blank">Orthotopic Patient-Derived Xenograft Mouse Modeling</a></h2>
+        <p>We utilize orthotopic patient-derived xenograft (PDX) models and immunocompetent mouse models to study tumor growth and response to therapies in a more physiologically relevant context. 
+            These models enable us to evaluate the efficacy of novel therapeutic agents and investigate the tumor microenvironment's role in cancer progression. Our research seeks to bridge the gap between bench and bedside by providing insights that can inform clinical decision-making.</p>
+        <button class="read-more-btn" onclick="toggleInfo(this)">Read More</button>
+        <div class="additional-info">
+          <p>By employing PDX models, which involve implanting human tumors directly into the corresponding organ of immunocompromised mice, we can maintain the heterogeneity and complexity of the original tumor. This approach allows for a more accurate assessment of how specific therapies interact with 
+            tumor biology, leading to more personalized treatment strategies. In parallel, the use of immunocompetent mouse models helps us understand how an intact immune system interacts with tumor cells and therapeutic interventions.
+        </p>
+          <div class="image-grid">
+            <img src="orthotopic_mousemodel.jpg" alt="Image 13">
+            <img src="brain_mets_mousemodel.jpg" alt="Image 14">
+          </div>
+          <p><b>Syngeneic mouse model development for GBM :</b></p>
+          <div class="image-grid">
+            <img src="syngeric_mouse.jpg" alt="Image 15">
+            <img src="credit1.jpeg" alt="Image 16">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Research Container 5 -->
+    <div class="research-container">
+      <img src="biomarker.jpg" alt="Discovery of Biomarkers for Early Cancer Detection" class="research-image">
+      <div class="research-content">
+        <h2>Discovery of Biomarkers for Early Cancer Detection</a></h2>
+        <p>Our lab is actively engaged in the discovery and validation of novel biomarkers for early cancer detection.<br> By employing advanced omics technologies and machine learning/quantum algorithms, 
+            we aim to identify specific molecular signatures that can predict tumor presence and progression. Early detection is crucial for improving patient outcomes,
+            and our work focuses on translating these findings into clinically applicable tests that can be used for screening and diagnosis</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 TNAB Lab. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleInfo(button) {
+      const additionalInfo = button.nextElementSibling;
+      const isVisible = additionalInfo.style.display === 'block';
+      additionalInfo.style.display = isVisible ? 'none' : 'block';
+      button.innerText = isVisible ? 'Read More' : 'Read Less';
+    }
+  </script>
+</body>
+</html>

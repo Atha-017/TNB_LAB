@@ -58,14 +58,14 @@ section {
 }
 
 h1, h2 {
-  text-align: center;
+  text-align: auto;
   color: #333;
 }
 
 p {
   max-width: 800px;
   margin: 10px auto;
-  text-align: center;
+  text-align: auto;
 }
 
 /* Team Page Specific Styles */
@@ -130,6 +130,7 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Home and Other Sections (preserved from the previous design) */

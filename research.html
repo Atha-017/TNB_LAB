@@ -12,13 +12,12 @@
       margin: 0;
       padding: 0;
       background-color: #f8f9fa;
-      overflow-x: hidden; /* Prevent horizontal scrolling */
     }
 
     header {
       background-color: #082233;
       color: white;
-      padding: 30px;
+      padding: 25px;
       text-align: center;
       font-family: 'Montserrat', sans-serif;
     }
@@ -31,20 +30,18 @@
     nav ul li {
       display: inline;
       margin-right: 30px;
-      font-size: 1.4em;
-      font-family: 'Montserrat', sans-serif;
+      font-size: 1.2em;
     }
 
     nav ul li a {
       color: white;
       text-decoration: none;
       font-size: 1.1em;
-      font-family: 'Montserrat', sans-serif;
     }
 
     main {
-      padding: 25px;
-      text-align: center;
+      padding: 20px;
+      text-align: left;
     }
 
     footer {
@@ -55,49 +52,6 @@
       position: relative;
       bottom: 0;
       width: 100%;
-      font-family: 'Montserrat', sans-serif;
-    }
-     /* Dropdown Menu */
-  nav ul li {
-  position: relative; /* Add this to enable absolute positioning of the dropdown */
-}
-nav ul li:hover .dropdown {
-  display: block;
-}
-
-.dropdown {
-  display: none;
-  position: absolute;
-  background-color: #e7e7e7; /* Light grey background */
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  overflow: hidden;
-  z-index: 1000;
-  top: 100%; /* Positions it below the News item */
-  left: -40px; /* Aligns it with the News item */
-  width: 150px; /* Smaller dropdown width */
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.dropdown a {
-  color: #082233;
-  font-size: 0.8em; /* Slightly smaller text size */
-  padding: 8px 8px; /* Reduced padding */
-  display: block;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.dropdown a:hover {
-  background-color: #bbbbbb; /* Dark grey background on hover */
-  color: rgb(0, 0, 0);
-  text-align: center;
-}
-
-    main {
-      padding: 20px;
-      text-align: left;
     }
 
     .research-container {
@@ -205,17 +159,9 @@ nav ul li:hover .dropdown {
     <nav>
       <ul>
         <li><a href="index.html" id="home-link">Home</a></li>
-        <li><a href="research.html" id="research-link">Research</a></li>
+        <li><a href="research.html" id="research-link" class="active">Research</a></li>
         <li><a href="team.html" id="team-link">Team</a></li>
-        <li><a href="publications.html" id="publications-link">Publications</a></li>
-        <li>
-          <a href="news.html" id="news-link" class="active">News</a>
-          <div class="dropdown">
-            <a href="media.html">Media</a>
-            <a href="achievements.html">Achievements</a>
-            <a href="new_positions.html">New Positions</a>
-          </div>
-        </li>
+        <li><a href="news.html" id="news-link">News</a></li>
         <li><a href="gallery.html" id="gallery-link">Gallery</a></li>
         <li><a href="contact.html" id="contact-link">Contact</a></li>
       </ul>
@@ -226,49 +172,12 @@ nav ul li:hover .dropdown {
   <main>
     <h1>Our Research Projects</h1>
     <p>Explore our innovative research topics and contributions in biomedical sciences.</p>
+
     <!-- Research Container 1 -->
-    <div class="research-container">
-      <img src="orgnoid.jpg" alt="Precision Engineering Using 3D Organoid Development" class="research-image">
-      <div class="research-content">
-        <h2><a href="research.html" target="_blank">Precision Engineering Using 3D Organoid Development</a></h2>
-        <p>Our precision engineering efforts involve the development of 3D organoid models that closely mimic the architecture and biology of human tumors. These organoids serve as powerful tools for 
-            studying tumor behavior, drug response, and therapeutic resistance. By utilizing patient-derived organoids, we aim to facilitate personalized treatment strategies and identify potential therapeutic 
-            targets that can be validated in vitro and in vivo.</p>
-        <button class="read-more-btn" onclick="toggleInfo(this)">Read More</button>
-        <div class="additional-info">
-          <p>These models allow us to recreate the tumor microenvironment with high fidelity, enabling us to observe cellular interactions and behaviors that are critical for understanding cancer progression.
-             By studying these organoids, we can uncover the mechanisms behind tumor heterogeneity and the varied responses to treatments among patients. This insight is vital for developing targeted therapies that address the unique characteristics of each tumor.
-            <br>Additionally, we are exploring the integration of high-throughput screening technologies with our organoid models, which will significantly accelerate the drug discovery process. 
-            By systematically testing a wide range of compounds, we can identify those that exhibit the most promising efficacy against specific tumor types, paving the way for clinical trials tailored to the individual patient's cancer profile.</p>
-            <p><br><b>3D Organoid platforms to study anti-invasive therapy :</b></p>
-          <div class="image-grid">
-            <img src="3d_org.jpg" alt="Image 13" class="img_g">
-            <img src="3d_org_2.jpg" alt="Image 14" class="img_g">
-            <img src="3d_org1_1.jpg" alt="Image 15" class="img_g">
-            <img src="3d_org1_2.jpg" alt="Image 16" class="img_g">
-          </div>
-            <p><b>3D Organoid models representing different stages of GBM :</b>
-            </p>
-            <div class="image-grid">
-                <img src="3d_31.jpg" alt="Image 13" class="img_g">
-                <img src="3d_32.jpg" alt="Image 14" class="img_g">
-              </div>
-              <p><b>Growing organoids in distinct environment :</b></p>
-              <div class="image-grid">
-                <img src="smat1.jpg" alt="Image 13" class="img_g">
-                <img src="smat2.jpg" alt="Image 14" class="img_g">
-              </div>
-              </div>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- Research Container 2 -->
     <div class="research-container">
       <img src="nano_1.jpg" alt="Translational Nanotherapeutics" class="research-image">
       <div class="research-content">
-        <h2><a href="research.html" target="_blank">Translational Nanobiotherapeutics</a></h2>
+        <h2><a href="research.html" target="_blank">Translational Nanotherapeutics</a></h2>
         <p>Our research in translational nanotherapeutics aims to develop innovative nanoparticle-based drug delivery systems that enhance the efficacy and specificity of cancer therapies.
         By leveraging the unique properties of nanomaterials, we seek to improve therapeutic outcomes while minimizing systemic side effects.
         Our multidisciplinary approach integrates nanotechnology and molecular biology, allowing us to design tailored formulations that target tumor cells and the tumor microenvironment effectively.</p>
@@ -290,7 +199,7 @@ nav ul li:hover .dropdown {
     By embedding these nanovesicles within a tunable gel matrix, we can enhance their regional delivery potential and minimize off-target tissue damage.
          </p>
           <div class="image-grid">
-            <img src="image.jpg" alt="Image 1">
+            <img src="tn_1.jpg" alt="Image 1">
             <img src="tn_2.jpg" alt="Image 2">
             <img src="tn_3.jpg" alt="Image 3">
           </div>
@@ -298,11 +207,11 @@ nav ul li:hover .dropdown {
       </div>
     </div>
 
-    <!-- Research Container 3 -->
+    <!-- Research Container 2 -->
     <div class="research-container">
       <img src="imo.jpg" alt="Immunotherapy" class="research-image">
       <div class="research-content">
-        <h2><a href="research.html" target="_blank">Precision Immunotherapy</a></h2>
+        <h2><a href="research.html" target="_blank">Immunotherapy</a></h2>
         <p>We are dedicated to advancing the field of cancer immunotherapy through the exploration of novel strategies that activate and harness the immune system to combat malignancies. 
             Our lab investigates the interplay between nanoparticles and immune cells to develop synergistic treatments that enhance antitumor responses. This includes studying immune checkpoint inhibitors 
             and nanovaccines to create more effective and personalized therapeutic options for cancer patients.</p>
@@ -319,6 +228,45 @@ nav ul li:hover .dropdown {
           <div class="image-grid">
             <img src="im_1.jpg" alt="Image 5">
           </div>
+          <p>In summary, our lab is at the forefront of cancer immunotherapy research, exploring the synergies between nanoparticles and immune cells to develop advanced therapeutic strategies. 
+            We are driven by a passion for improving the lives of cancer patients and are committed to making a meaningful impact in the fight against cancer.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Research Container 3 -->
+    <div class="research-container">
+      <img src="orgnoid.jpg" alt="Precision Engineering Using 3D Organoid Development" class="research-image">
+      <div class="research-content">
+        <h2><a href="research.html" target="_blank">Precision Engineering Using 3D Organoid Development</a></h2>
+        <p>Our precision engineering efforts involve the development of 3D organoid models that closely mimic the architecture and biology of human tumors. These organoids serve as powerful tools for 
+            studying tumor behavior, drug response, and therapeutic resistance. By utilizing patient-derived organoids, we aim to facilitate personalized treatment strategies and identify potential therapeutic 
+            targets that can be validated in vitro and in vivo.</p>
+        <button class="read-more-btn" onclick="toggleInfo(this)">Read More</button>
+        <div class="additional-info">
+          <p>These models allow us to recreate the tumor microenvironment with high fidelity, enabling us to observe cellular interactions and behaviors that are critical for understanding cancer progression.
+             By studying these organoids, we can uncover the mechanisms behind tumor heterogeneity and the varied responses to treatments among patients. This insight is vital for developing targeted therapies that address the unique characteristics of each tumor.
+            <br>Additionally, we are exploring the integration of high-throughput screening technologies with our organoid models, which will significantly accelerate the drug discovery process. 
+            By systematically testing a wide range of compounds, we can identify those that exhibit the most promising efficacy against specific tumor types, paving the way for clinical trials tailored to the individual patient's cancer profile.</p>
+            <p><br><b>3D Organoid platforms to study anti-invasive therapy :</b></p>
+          <div class="image-grid">
+            <img src="3d_org.jpg" alt="Image 13" class="img_g">
+            <img src="3d_org_2.jpg" alt="Image 14" class="img_g">
+            <img src="3d_org1_1.jpg" alt="Image 15" class="img_g">
+            <img src="3d_org1_2.jpg" alt="Image 16" class="img_g">
+          </div>
+            <p><b>3D Organoid models representing early metastasis stages of GBM :</b>
+            </p>
+            <div class="image-grid">
+                <img src="3d_31.jpg" alt="Image 13" class="img_g">
+                <img src="3d_32.jpg" alt="Image 14" class="img_g">
+              </div>
+              <p><b>Growing organoids in organ specific matrix : </b></p>
+              <div class="image-grid">
+                <img src="smat1.jpg" alt="Image 13" class="img_g">
+                <img src="smat2.jpg" alt="Image 14" class="img_g">
+              </div>
+              </div>
         </div>
       </div>
     </div>
@@ -342,6 +290,7 @@ nav ul li:hover .dropdown {
           <p><b>Syngeneic mouse model development for GBM :</b></p>
           <div class="image-grid">
             <img src="syngeric_mouse.jpg" alt="Image 15">
+            <img src="credit1.jpeg" alt="Image 16">
           </div>
         </div>
       </div>
@@ -362,7 +311,7 @@ nav ul li:hover .dropdown {
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2024 The TNB LAB. All rights reserved.</p>
+    <p>&copy; 2024 TNAB Lab. All rights reserved.</p>
   </footer>
 
   <script>

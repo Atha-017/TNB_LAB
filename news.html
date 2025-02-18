@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Publications - TNB Lab</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>News - TNB Lab</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
@@ -17,8 +18,9 @@
     header {
       background-color: #082233;
       color: white;
-      padding: 30px;
+      padding: 25px;
       text-align: center;
+      font-family: 'Montserrat', sans-serif;
     }
 
     nav ul {
@@ -29,7 +31,7 @@
     nav ul li {
       display: inline;
       margin-right: 30px;
-      font-size: 1.4em;
+      font-size: 1.2em;
     }
 
     nav ul li a {
@@ -39,145 +41,9 @@
     }
 
     main {
-      padding: 25px;
-      align-items: center;
+      padding: 20px;
+      text-align: center;
     }
-
-    .timeline {
-      position: relative;
-      margin: 40px auto;
-      padding: 20px 0;
-      max-width: 1000px;
-    }
-
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 0%;
-      top: 0;
-      width: 4px;
-      background-color: #082233;
-      height: 100%;
-    }
-    .timeline::after {
-    content: '';
-    position: absolute;
-    left: 0%; /* Center horizontally */
-    bottom: 20px; /* Move the horizontal line slightly down */
-    width: 65px; /* Length of the horizontal line */
-    height: 4px; /* Thickness of the horizontal line */
-    background-color: #082233; /* Line color */
-    transform: translateX(-50%); /* Center the horizontal line */
-} 
-    .timeline-item {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      margin: 30px 0;
-      position: relative;
-      left: 5%;
-    }
-
-    .timeline-item:nth-child(even) {
-      flex-direction: row;
-    }
-
-    .timeline-item-date {
-      position: absolute;
-      left: -180px;
-      font-weight: bold;
-      font-size: 1.2em;
-      color: #333;
-      width: 100px;
-      text-align: right;
-    }
-
-    .timeline-item-content {
-      background-color: #ffffff;
-      padding: 15px;
-      border-radius: 0px;
-      border: 1px solid #ddd;
-      max-width: 900px;
-      width: 300%;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      animation: fadeIn 0.5s ease;
-      text-align: left;
-      margin-left: 0;
-    }
-
-    .timeline-item-content ul {
-      margin: 10px 0;
-      padding-left: 20px; /* Indentation for the bullets */
-      list-style-type: disc; /* Default disc bullets */
-    }
-
-    .timeline-item-content ul li {
-      margin-bottom: 8px; /* Adds spacing between bullet points */
-      line-height: 1.6; /* Increases readability */
-    }
-    .timeline-item-date::after {
-    content: '';
-    position: absolute;
-    top: 30%; /* Vertically center relative to the date */
-    left: 123%; /* Position exactly at the intersection of the vertical line */
-    width: 15px; /* Width of the circle */
-    height: 15px; /* Height of the circle */
-    background-color: #ffffff; /* Circle color */
-    border: 2px solid black;
-    border-radius: 50%; /* Make it a circle */
-}
-    
-
-    .patents {
-  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
-  padding: 30px;
-  border: 2px solid #082233;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  margin-bottom: 50px;
-  animation: fadeIn 0.5s ease;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.patents h2 {
-  text-align: center;
-  color: #082233;
-  font-size: 2em;
-  margin-bottom: 25px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-}
-
-.patent-item {
-  margin-bottom: 20px;
-  padding: 10px 15px;
-  background-color: #ffffff;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.patent-item:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.patent-item h3 {
-  color: #082233;
-  font-size: 1.3em;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-.patent-item p {
-  line-height: 1.8;
-  font-size: 1.1em;
-  color: #444;
-  margin: 0;
-}
-
 
     footer {
       text-align: center;
@@ -187,58 +53,8 @@
       position: relative;
       bottom: 0;
       width: 100%;
+      font-family: 'Montserrat', sans-serif;
     }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    h1 {
-    text-align: left; /* Aligns text to the right */
-    margin-left: 85px; /* Adds space to the right of the heading */
-}
-  /* Dropdown Menu */
-  nav ul li {
-  position: relative; /* Add this to enable absolute positioning of the dropdown */
-}
-nav ul li:hover .dropdown {
-  display: block;
-}
-
-.dropdown {
-  display: none;
-  position: absolute;
-  background-color: #e7e7e7; /* Light grey background */
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  overflow: hidden;
-  z-index: 1000;
-  top: 100%; /* Positions it below the News item */
-  left: -40px; /* Aligns it with the News item */
-  width: 150px; /* Smaller dropdown width */
-  text-align: center;
-}
-
-.dropdown a {
-  color: #082233;
-  font-size: 0.8em; /* Slightly smaller text size */
-  padding: 8px 8px; /* Reduced padding */
-  display: block;
-  text-align: center;
-}
-
-.dropdown a:hover {
-  background-color: #bbbbbb; /* Dark grey background on hover */
-  color: rgb(0, 0, 0);
-  text-align: center;
-}
-
   </style>
 </head>
 <body>
@@ -248,17 +64,9 @@ nav ul li:hover .dropdown {
     <nav>
       <ul>
         <li><a href="index.html" id="home-link">Home</a></li>
-        <li><a href="research.html" id="research-link">Research</a></li>
+        <li><a href="research.html" id="research-link" class="active">Research</a></li>
         <li><a href="team.html" id="team-link">Team</a></li>
-        <li><a href="publications.html" id="publications-link">Publications</a></li>
-        <li>
-          <a href="news.html" id="news-link" class="active">News</a>
-          <div class="dropdown">
-            <a href="media.html">Media</a>
-            <a href="achievements.html">Achievements</a>
-            <a href="new_positions.html">New Positions</a>
-          </div>
-        </li>
+        <li><a href="news.html" id="news-link" class="active">News</a></li>
         <li><a href="gallery.html" id="gallery-link">Gallery</a></li>
         <li><a href="contact.html" id="contact-link">Contact</a></li>
       </ul>
@@ -267,97 +75,14 @@ nav ul li:hover .dropdown {
 
   <!-- Main Content -->
   <main>
-    <div class="patents">
-      <h2>Patents / Licensing / Technology Transfer</h2>
-      <div class="patent-item">
-        <h3>Patent No. 408307</h3>
-        <p>
-          Nanoparticles incorporated self-gelling composition as drug delivery system.
-        </p>
-      </div>
-      <div class="patent-item">
-        <h3>Patent No. 366070</h3>
-        <p>
-          Micronutrient supplement lip-salve.
-        </p>
-      </div>
-      <div class="patent-item">
-        <h3>New Application filled</h3>
-        <p>
-          In-situ depot release therapy for regenerative medicines
-        </p>
-      </div>
-    </div>
-    <h1>Publications :</h1>
+    <h1>News</h1>
     <p>Discover our latest research publications and articles.</p>
-
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-item-date">December 2024</div>
-        <div class="timeline-item-content">
-          <ul>
-               <li> Nanomedicine as a multimodal therapeutic paradigm against cancer: on the way forward in advancing
-                precision therapy.<br> Nanoscale. 2024;16(13):6330-6364. doi:10.1039/d3nr06131k
-                </li>
-          </ul>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-item-date">November 2023</div>
-        <div class="timeline-item-content">
-          <ul>
-            <li>Targeted nano-delivery of chemotherapy via intranasal route suppresses in vivo glioblastoma growth and
-                prolongs survival in the intracranial mouse model.<br> Drug Deliv Transl Res. 2023;13(2):608-626.
-                doi:10.1007/s13346-022-01220-8</li>
-            <li>Insight into lipid-based nanoplatform-mediated drug and gene delivery in neuro-oncology and their clinical
-                prospects.<br> Front Oncol. 2023;13:1168454. doi:10.3389/fonc.2023.1168454</li>
-          </ul>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-item-date">October 2022</div>
-        <div class="timeline-item-content">
-          <ul>
-            <li>Bio-polymeric transferrin-targeted temozolomide nanoparticles in gel for post-surgical GBM therapy. 
-                <i>Nanoscale,</i> 2022;14(35):12773-12788. doi:10.1039/d2nr00171c</li>
-            <li>Spatial specific delivery of combinational chemotherapeutics to combat intratumoral heterogeneity. <br>J Control
-                Release. 2022;348:1004-1015. doi:10.1016/j.jconrel.2022.06.046</li>
-          </ul>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-item-date">October 2021</div>
-        <div class="timeline-item-content">
-          <ul>
-            <li>Non-invasive transferrin targeted nanovesicles sensitize resistant glioblastoma multiforme tumors and
-                improve survival in orthotopic mouse models.<br>Nanoscale. 2021;14(1):108-126. doi:10.1039/d1nr05460k</li>
-          </ul>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-item-date">August 2018</div>
-        <div class="timeline-item-content">
-          <ul>
-            <li>Stable Liposome in Cosmetic Platforms for Transdermal Folic acid delivery for fortification and treatment of
-                micronutrient deficiencies.<br>Sci Rep. 2018;8(1):16122. doi:10.1038/s41598-018-34205-0</li>
-            <li>Nanotechnology-based strategies as novel therapies in gliomas.<br>Ther Deliv. 2018;9(8):571-592.
-                doi:10.4155/tde-2018-0022</li>
-            <li>Advances in point-of-care diagnostic devices in cancers.<br>Analyst. 2018;143(6):1326-1348.
-                doi:10.1039/c7an01771e</li>
-          </ul>
-        </div>
-        <!-- add to timeline here -->
-      </div>
-    </div>
-    </div>
-    
-    
+    <!-- Add publications content here -->
   </main>
-  
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2024 The TNB LAB. All rights reserved.</p>
+    <p>&copy; 2024 TNB LAB. All rights reserved.</p>
   </footer>
 
 </body>

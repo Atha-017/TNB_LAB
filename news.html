@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>News - TNB Lab</title>
+  <title>Media - TNB Lab</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
@@ -18,9 +17,8 @@
     header {
       background-color: #082233;
       color: white;
-      padding: 25px;
+      padding: 30px;
       text-align: center;
-      font-family: 'Montserrat', sans-serif;
     }
 
     nav ul {
@@ -31,7 +29,7 @@
     nav ul li {
       display: inline;
       margin-right: 30px;
-      font-size: 1.2em;
+      font-size: 1.4em;
     }
 
     nav ul li a {
@@ -41,9 +39,11 @@
     }
 
     main {
-      padding: 20px;
+      padding: 25px;
       text-align: center;
     }
+
+   
 
     footer {
       text-align: center;
@@ -53,8 +53,43 @@
       position: relative;
       bottom: 0;
       width: 100%;
-      font-family: 'Montserrat', sans-serif;
     }
+     /* Dropdown Menu */
+  nav ul li {
+  position: relative; /* Add this to enable absolute positioning of the dropdown */
+}
+nav ul li:hover .dropdown {
+  display: block;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #e7e7e7; /* Light grey background */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1000;
+  top: 100%; /* Positions it below the News item */
+  left: -40px; /* Aligns it with the News item */
+  width: 150px; /* Smaller dropdown width */
+  text-align: center;
+}
+
+.dropdown a {
+  color: #082233;
+  font-size: 0.8em; /* Slightly smaller text size */
+  padding: 8px 8px; /* Reduced padding */
+  display: block;
+  text-align: center;
+}
+
+.dropdown a:hover {
+  background-color: #bbbbbb; /* Dark grey background on hover */
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
   </style>
 </head>
 <body>
@@ -64,9 +99,17 @@
     <nav>
       <ul>
         <li><a href="index.html" id="home-link">Home</a></li>
-        <li><a href="research.html" id="research-link" class="active">Research</a></li>
+        <li><a href="research.html" id="research-link">Research</a></li>
         <li><a href="team.html" id="team-link">Team</a></li>
-        <li><a href="news.html" id="news-link" class="active">News</a></li>
+        <li><a href="publications.html" id="publications-link">Publications</a></li>
+        <li>
+          <a href="news.html" id="news-link" class="active">News</a>
+          <div class="dropdown">
+            <a href="media.html">Media</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="new_positions.html">New Positions</a>
+          </div>
+        </li>
         <li><a href="gallery.html" id="gallery-link">Gallery</a></li>
         <li><a href="contact.html" id="contact-link">Contact</a></li>
       </ul>
@@ -75,14 +118,14 @@
 
   <!-- Main Content -->
   <main>
-    <h1>News</h1>
-    <p>Discover our latest research publications and articles.</p>
-    <!-- Add publications content here -->
+    <h1>Find our lastest news</h1>
+    <p>To be updated</p>
   </main>
+  
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2024 TNB LAB. All rights reserved.</p>
+    <p>&copy; 2024 The TNB LAB. All rights reserved.</p>
   </footer>
 
 </body>

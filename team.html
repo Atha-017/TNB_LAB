@@ -14,12 +14,13 @@
       margin: 0;
       padding: 0;
       background-color: #f8f9fa;
+      overflow-x: hidden; /* Prevent horizontal scrolling */
     }
 
     header {
       background-color: #082233;
       color: white;
-      padding: 25px;
+      padding: 30px;
       text-align: center;
       font-family: 'Montserrat', sans-serif;
     }
@@ -31,20 +32,70 @@
 
     nav ul li {
       display: inline;
-      margin-right: 30px; /* Increase space between navigation items */
-      font-size: 1.2em; /* Increase font size for navigation items */
+      margin-right: 30px;
+      font-size: 1.4em;
+      font-family: 'Montserrat', sans-serif;
     }
 
     nav ul li a {
       color: white;
       text-decoration: none;
-      font-size: 1.1em; /* Increase font size for links */
+      font-size: 1.1em;
+      font-family: 'Montserrat', sans-serif;
     }
-    
-    nav ul li a:hover {
-      color: #ff9800;
-      border-bottom: 2px solid #ff9800;
+
+    main {
+      padding: 25px;
+      text-align: center;
     }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background-color: #082233;
+      color: white;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+     /* Dropdown Menu */
+  nav ul li {
+  position: relative; /* Add this to enable absolute positioning of the dropdown */
+}
+nav ul li:hover .dropdown {
+  display: block;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #e7e7e7; /* Light grey background */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1000;
+  top: 100%; /* Positions it below the News item */
+  left: -40px; /* Aligns it with the News item */
+  width: 150px; /* Smaller dropdown width */
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.dropdown a {
+  color: #082233;
+  font-size: 0.8em; /* Slightly smaller text size */
+  padding: 8px 8px; /* Reduced padding */
+  display: block;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.dropdown a:hover {
+  background-color: #bbbbbb; /* Dark grey background on hover */
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
 
     /* Main content styles */
     main {
@@ -149,17 +200,6 @@ h1 {
         margin: 0 0 10px 0;
       }
     }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      background-color: #082233;
-      color: white;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-      font-family: 'Montserrat', sans-serif;
-    }
   </style>
 </head>
 <body>
@@ -168,10 +208,18 @@ h1 {
   <header>
     <nav>
       <ul>
-        <li><a href="index.html" id="home-link" class="active">Home</a></li>
-        <li><a href="research.html" id="research-link" class="active">Research</a></li>
+        <li><a href="index.html" id="home-link">Home</a></li>
+        <li><a href="research.html" id="research-link">Research</a></li>
         <li><a href="team.html" id="team-link">Team</a></li>
-        <li><a href="news.html" id="news-link" class="active">News</a></li>
+        <li><a href="publications.html" id="publications-link">Publications</a></li>
+        <li>
+          <a href="news.html" id="news-link" class="active">News</a>
+          <div class="dropdown">
+            <a href="media.html">Media</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="new_positions.html">New Positions</a>
+          </div>
+        </li>
         <li><a href="gallery.html" id="gallery-link">Gallery</a></li>
         <li><a href="contact.html" id="contact-link">Contact</a></li>
       </ul>
@@ -184,7 +232,7 @@ h1 {
     <section id="team">
       <!-- Principal Investigator Section -->
       <div class="team-section pi-section">
-        <img src="f_blank-pfp.jpg" alt="Principal Investigator" class="team-photo pi-photo">
+        <img src="doc_pooja.JPG" alt="Principal Investigator" class="team-photo pi-photo">
         <h2>Dr. Puja Sandbhor, PhD</h2>
         <p>Principal Investigator</p>
         <p>Dr. Puja Sandbhor completed her Bachelor's degree in Pharmacy from Mumbai University in 2010,
@@ -247,14 +295,14 @@ h1 {
       <h2>Siddharth Mudliyar</h2>
       <p>Siddharth Mudliyar completed his Master's in Biotechnology from SIES college, Mumbai. 
         He has worked on finding potential secretomic biomarkers in triple negative breast 
-        cancer from Nandini lab in KEM hospital. His areas of interest are the development of high-grade
+        cancer from Nandini lab ACTREC. His areas of interest are the development of high-grade
         gliomas organoids and the identification of distinct functions for various cells and tumor
         environments within those organoids.</p>
       <button class="view-toggle-btn" id="toggle-btn-student-2" onclick="toggleDetails('full-details-student-2', this)">View More</button>
       <div class="full-details" id="full-details-student-2">
         <p>His work is focused on exploring ways to identify novel therapeutic targets for 
           cancer treatment, with an emphasis on the tumor microenvironment and personalized medicine. 
-          His research interest also includes using CRISPR-Cas9 for gene editing to understand cancer progression.</p>
+          His research interest also includes playing sports such as cricket and chess.</p>
       </div>
     </div>
   </div>
@@ -294,7 +342,7 @@ h1 {
   </main>
 
   <footer>
-    <p>&copy; 2024 TNB LAB. All rights reserved.</p>
+    <p>&copy; 2024 The TNB LAB. All rights reserved.</p>
   </footer>
 
   <script>

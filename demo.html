@@ -227,7 +227,70 @@ nav ul li:hover .dropdown {
   text-decoration: underline; /* Underline on hover to indicate a link */
   cursor: pointer; /* Change cursor to pointer */
   }
+  /* Dropdown styles */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 180px;
+    border-radius: 5px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
 
+.dropdown a {
+    padding: 12px 15px;
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.dropdown a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Show dropdown with animation */
+.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Dropdown toggle button - Only visible on mobile */
+.dropdown-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+/* Responsive: Show the toggle button only on small screens */
+@media screen and (max-width: 768px) {
+    .dropdown-toggle {
+        display: inline-block;
+    }
+
+    /* Ensure dropdown appears as a block below News on mobile */
+    .dropdown {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .dropdown a {
+        text-align: left;
+        padding-left: 20px;
+    }
+}
   </style>
 </head>
 <body>
@@ -240,17 +303,18 @@ nav ul li:hover .dropdown {
         <li><a href="research.html" id="research-link">Research</a></li>
         <li><a href="team.html" id="team-link">Team</a></li>
         <li><a href="publications.html" id="publications-link">Publications</a></li>
-        <li>
+        <li class="dropdown-container">
           <a href="news.html" id="news-link" class="active">News</a>
-          <div class="dropdown">
-            <a href="media.html">Media</a>
-            <a href="achievements.html">Achievements</a>
-            <a href="new_positions.html">New Positions</a>
+          <button type="button" class="dropdown-toggle" onclick="toggleDropdown()">☰</button>
+          <div class="dropdown" id="news-dropdown">
+              <a href="media.html">Media</a>
+              <a href="achievements.html">Achievements</a>
+              <a href="new_positions.html">New Positions</a>
           </div>
-        </li>
+      </li>
         <li><a href="gallery.html" id="gallery-link">Gallery</a></li>
         <li><a href="contact.html" id="contact-link">Contact</a></li>
-      </ul>
+    </ul>
     </nav>
   </header>
 
@@ -420,6 +484,13 @@ nav ul li:hover .dropdown {
   
     window.addEventListener('scroll', animateCollaborationSection);
     window.addEventListener('load', animateCollaborationSection);
+  </script>
+
+<script>
+  function toggleDropdown() {
+      var dropdown = document.getElementById("news-dropdown");
+      dropdown.classList.toggle("show");
+  }
   </script>
   
 </body>

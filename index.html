@@ -145,7 +145,7 @@ nav ul li:hover .dropdown {
     .inspiration-container h2 {
       color: #082233;
       font-size: 2em;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       margin-left: 0;
       font-family: 'Montserrat', sans-serif;
       text-align: center;
@@ -227,8 +227,70 @@ nav ul li:hover .dropdown {
   text-decoration: underline; /* Underline on hover to indicate a link */
   cursor: pointer; /* Change cursor to pointer */
   }
+  /* Our Recent Happenings Section */
+  .recent-happenings-container {
+  padding: 0px 20px;
+  text-align: center;
+  width: 100%;
+  background-color: #f8f9fa; 
+}
 
-  </style>
+.recent-happenings-container h2 {
+  color: #082233;
+  font-size: 2em;
+  margin-bottom: 35px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.recent-happenings-subcontainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.happening-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 0;
+  width: 300px; /* Adjusted width */
+  height: auto;
+  overflow: hidden; /* Ensures content stays within the card */
+  transition: transform 0.3s ease-in-out;
+}
+
+.happening-item:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.happening-image img {
+  width: 100%; /* Full width */
+  height: 180px; /* Fixed height */
+  object-fit: cover; /* Ensures proper image fit */
+}
+
+.happening-text {
+  padding: 15px;
+  text-align: center;
+}
+
+.happening-text a {
+  font-size: 1em;
+  text-decoration: none;
+  color: #0e2331;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.happening-text a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+ </style>
 </head>
 <body>
 
@@ -291,6 +353,37 @@ nav ul li:hover .dropdown {
         </div>
       </div>
     </section>
+        <!-- Our Recent Happenings Section -->
+        <section class="recent-happenings-container">
+          <h2>Our Recent Happenings</h2>
+          <div class="recent-happenings-subcontainer">
+            <div class="happening-item">
+              <div class="happening-image">
+                <img src="dr_pooja_recent.jpg" alt="Event 1">
+              </div>
+              <div class="happening-text">
+                <a href="news.html">Success Story: Prime Minister's Early Career Research Grant Awarded to Our Lab.</a>
+              </div>
+            </div>
+            <div class="happening-item">
+              <div class="happening-image">
+                <img src="patent_recent.jpg".jpg" alt="Event 2">
+              </div>
+              <div class="happening-text">
+                <a href="publications.html">Application Filled: In-situ depot release therapy for regenerative medicines</a>
+              </div>
+            </div>
+            <div class="happening-item">
+              <div class="happening-image">
+                <img src="openings_recent.jpg".jpg" alt="Event 3">
+              </div>
+              <div class="happening-text">
+                <a href="new_positions.html">Research Traineeship / Dissertation Traineeship Opportunity</a>
+              </div>
+            </div>
+          </div>
+        </section>
+    
     <section class="collaboration-container">
       <h2>Proudly collaborating with</h2>
       <div class="collaboration-subcontainer">
@@ -424,7 +517,6 @@ nav ul li:hover .dropdown {
   
 </body>
 </html>
-
 
 
 

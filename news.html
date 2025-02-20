@@ -1,50 +1,112 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Media - TNB Lab</title>
+  <title>News - TNB Lab</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Montserrat', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f8f9fa;
-    }
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
 
-    header {
-      background-color: #082233;
-      color: white;
-      padding: 30px;
-      text-align: center;
-    }
+/* Header Styling */
+header {
+    background-color: #082233;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
 
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-    }
+/* Navigation Menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
 
-    nav ul li {
-      display: inline;
-      margin-right: 30px;
-      font-size: 1.4em;
-    }
+nav ul li {
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 1.4em;
+    position: relative;
+}
 
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.1em;
-    }
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
 
-    main {
-      padding: 25px;
-      text-align: center;
-    }
+nav ul li a:hover {
+    color: #f4c20b;
+}
 
-   
+/* Dropdown Menu */
+nav ul li:hover .dropdown {
+    display: block;
+}
 
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #e7e7e7;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 1000;
+    top: 100%;
+    left: -40px;
+    width: 150px;
+    text-align: center;
+}
+
+.dropdown a {
+    color: #082233;
+    font-size: 0.9em;
+    padding: 10px;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: #bbbbbb;
+    color: black;
+}
+
+/* Main Content Styling */
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* News Section */
+.news-container {
+    background-color: #ffffff;
+    border-left: 6px solid #082233;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 1000px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: left;
+}
+
+.news-container h2 {
+    color: #082233;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.news-container p {
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.6;
+}
     footer {
       text-align: center;
       padding: 25px;
@@ -54,8 +116,7 @@
       bottom: 0;
       width: 100%;
     }
-     /* Dropdown Menu */
-  nav ul li {
+    nav ul li {
   position: relative; /* Add this to enable absolute positioning of the dropdown */
 }
 nav ul li:hover .dropdown {
@@ -117,10 +178,25 @@ nav ul li:hover .dropdown {
   </header>
 
   <!-- Main Content -->
-  <main>
-    <h1>Find our lastest news</h1>
-    <p>To be updated</p>
-  </main>
+  <!-- Main Content -->
+<main>
+  <h1>Find our latest news</h1>
+  
+  <div class="news-container">
+    <h2>Prime Minister’s Early Career Research Grant Award</h2>
+    <p>
+        We are proud to announce that Dr. Puja Sandbhor has been awarded the 
+        <strong><br>Prime Minister’s Early Career Research Grant</strong> for her 
+        cutting-edge work on glioblastoma precision therapeutics innovation.
+    </p>
+    <p style="font-size: 16px; color: #555;">
+      <em>Source<br>Published on 18th Feb 2025.<br>The TNB Lab.</em>
+  </p>
+</div>
+
+  <p>More updates coming soon!</p>
+</main>
+
   
 
   <!-- Footer -->

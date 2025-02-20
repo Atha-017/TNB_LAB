@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Home - TNB Lab</title>
+  <title>Gallery - TNB Lab</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"> <!-- Added Roboto font -->
+  <link href="https://fonts.googleapis.com/css2?family=Alemora&display=swap" rel="stylesheet"> <!-- Added Alemora font -->
 
   <style>
-
+    /* Basic styles */
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Montserrat', sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f8f9fa;
@@ -99,198 +99,103 @@ nav ul li:hover .dropdown {
   text-align: center;
 }
 
-
     /* Main content styles */
     main {
-      padding: 0;
+      padding: 40px;
     }
 
-    /* Full-width container styles */
-    /* Welcome section with full-width image and space below header */
-    .welcome-container {
-      padding: 20px 0 0; /* Add space above the image */
-      margin: 0;
-      opacity: 0; /* Start hidden */
-      animation: fadeIn 1.2s ease-in forwards; 
+    /* Animation styles */
+    .gallery-container {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      margin-bottom: 40px;
     }
 
-    .full-width-image {
-      width: 100vw;    /* Make the image span the full viewport width */
-      height: auto;    /* Maintain aspect ratio */
-      display: block;  /* Remove any inline spacing */
-    }
-    
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-    /* Animation trigger */
-    .show {
+    .gallery-container.show {
       opacity: 1;
       transform: translateY(0);
     }
 
-
-    /* Our Inspiration Section styles */
-    .inspiration-container {
-      padding: 40px;
-      text-align: left;
-      width: 100%;
-    }
-
-    .inspiration-container h2 {
-      color: #082233;
-      font-size: 2em;
-      margin-bottom: 25px;
-      margin-left: 0;
-      font-family: 'Montserrat', sans-serif;
-      text-align: center;
-    }
-
-    .inspiration-subcontainer {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    /* Sub-container styling with larger images */
-    .inspiration-container {
-      padding: 40px;
-      text-align: left; /* Ensure the container text is left-aligned */
-    }
-
-    .inspiration-container h2 {
-      color: #082233;
-      font-size: 2em;
-      margin-bottom: 25px;
-      margin-left: 0;
-    }
-
-    .inspiration-subcontainer {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    /* Sub-container styling with larger images */
-    .inspiration-item {
+    /* Image and text styles */
+    .gallery-item {
       display: flex;
       align-items: flex-start;
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
       background-color: #f0f0f0;
+      gap: 20px;
     }
 
-    .sub-image {
+    .gallery-image {
       flex: 1;
       max-width: 400px;
-      margin-right: 20px;
+      height: 100%;
     }
 
-    .sub-image img {
+    .gallery-image img {
       width: 100%;
-      height: auto;
+      height: 150;
+      object-fit: cover;
       border-radius: 8px;
     }
 
-    .sub-text {
-      flex: 3;
+    .gallery-text {
+      flex: 2;
       color: #333333;
       font-size: 1.1em;
-      text-align: left; /* Ensure the text is left-aligned */
-      font-family: 'Montserrat', sans-serif;
     }
 
-    .sub-text strong {
-      font-family: 'Alemora', sans-serif; /* Using Roboto font for names */
-      font-size: 1.5em; /* Increased font size for names */
-      color: #082233; /* Color for the names */
+    /* Heading style for Alemora font */
+    h2 {
+      font-family: 'Montserrat', sans-serif; 
+      font-size: 2em; /* Adjust font size as needed */
+      color: #082233; /* Heading color */
+      margin-bottom: 20px; /* Space below heading */
     }
-
-    /* New CSS rule to explicitly left-align paragraph text */
-    .sub-text p {
-      text-align: left; /* Left-align paragraphs */
-      margin: 0; /* Optional: Remove default margin for paragraphs */
-    }
-
-    .inspiration-link {
-      color: #082233; /* Change to desired link color */
-      text-decoration: none; /* Remove underline */
-    }
-
-.inspiration-link:hover {
-  text-decoration: underline; /* Underline on hover to indicate a link */
-  cursor: pointer; /* Change cursor to pointer */
-  }
-  /* Dropdown styles */
-.dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    width: 180px;
-    border-radius: 5px;
+    .slideshow-container {
+    position: relative;
+    width: 400px; /* Set the same fixed width as other images */
+    height: 250px; /* Set the same fixed height as other images */
     overflow: hidden;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit:fill; /* Ensures uniform image display */
+    border-radius: 8px;
     opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.5s ease-in-out;
 }
 
-.dropdown a {
-    padding: 12px 15px;
-    display: block;
-    color: black;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.dropdown a:hover {
-    background-color: #f0f0f0;
-}
-
-/* Show dropdown with animation */
-.show {
+.active {
     display: block;
     opacity: 1;
-    transform: translateY(0);
 }
 
-/* Dropdown toggle button - Only visible on mobile */
-.dropdown-toggle {
-    display: none;
-    background: none;
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
     border: none;
+    padding: 10px;
     cursor: pointer;
+    border-radius: 50%;
     font-size: 18px;
-    padding: 5px 10px;
 }
 
-/* Responsive: Show the toggle button only on small screens */
-@media screen and (max-width: 768px) {
-    .dropdown-toggle {
-        display: inline-block;
-    }
+.prev { left: 10px; }
+.next { right: 10px; }
 
-    /* Ensure dropdown appears as a block below News on mobile */
-    .dropdown {
-        position: static;
-        width: 100%;
-        box-shadow: none;
-        border-radius: 0;
-    }
-
-    .dropdown a {
-        text-align: left;
-        padding-left: 20px;
-    }
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
+
   </style>
 </head>
 <body>
@@ -303,196 +208,108 @@ nav ul li:hover .dropdown {
         <li><a href="research.html" id="research-link">Research</a></li>
         <li><a href="team.html" id="team-link">Team</a></li>
         <li><a href="publications.html" id="publications-link">Publications</a></li>
-        <li class="dropdown-container">
+        <li>
           <a href="news.html" id="news-link" class="active">News</a>
-          <button type="button" class="dropdown-toggle" onclick="toggleDropdown()">☰</button>
-          <div class="dropdown" id="news-dropdown">
-              <a href="media.html">Media</a>
-              <a href="achievements.html">Achievements</a>
-              <a href="new_positions.html">New Positions</a>
+          <div class="dropdown">
+            <a href="media.html">Media</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="new_positions.html">New Positions</a>
           </div>
-      </li>
+        </li>
         <li><a href="gallery.html" id="gallery-link">Gallery</a></li>
         <li><a href="contact.html" id="contact-link">Contact</a></li>
-    </ul>
+      </ul>
     </nav>
   </header>
 
   <!-- Main Content -->
   <main>
-    <!-- Welcome Section -->
-    <!-- Welcome Section -->
-<section class="welcome-container">
-  <img src="index_1.jpg" alt="TNAB Lab" class="full-width-image">
-</section>
-
-
-    <!-- Our Inspiration Section -->
-    <section class="inspiration-container">
-      <h2>Our inspiration</h2>
-      <div class="inspiration-subcontainer">
-        <div class="inspiration-item">
-          <div class="sub-image">
-            <img src="sir_rt.jpg" alt="Inspiration 1">
-          </div>
-          <div class="sub-text">
-            <strong>
-              <a href="https://en.wikipedia.org/wiki/Ratan_Tata" target="_blank" class="inspiration-link">Ratan Tata</a>
-            </strong>
-            <p><br>Our lab is deeply inspired by the visionary leadership and commitment to innovation exemplified by Padmashree Ratan Tata. His dedication to social impact and ethical excellence drives us to pursue groundbreaking advancements in Translational Nanomedicine and Bioengineering Lab Focus Area Nanotechnology and Precision therapy to make a meaningful difference in healthcare.<br>Through our work, we aim to embody his values of integrity, innovation, and empathy in all our endeavors.</p>
-          </div>
+    <section class="gallery-container">
+      <div class="gallery-item">
+        <div class="gallery-image">
+          <img src="dussehra.jpg" alt="Dussehra Celebration">
         </div>
-        <div class="inspiration-item">
-          <div class="sub-image">
-            <img src="rinti_maam.jpg" alt="Inspiration 2">
-          </div>
-          <div class="sub-text">
-            <strong>
-              <a href="https://www.bio.iitb.ac.in/~rbanerjee/home/" target="_blank" class="inspiration-link">Rinti Banerjee</a>
-            </strong>
-            <p>Our lab is guided by the pioneering spirit and dedication of the late Prof. Rinti Banerjee, who served as a mentor and a true visionary in the field of Nanomedicine. Her passion for impactful, interdisciplinary research continues to inspire our work, reminding us to pursue scientific excellence with purpose and compassion. Prof. Banerjee’s legacy of curiosity and commitment lives on as we strive to push the boundaries of knowledge and innovation.</p>
-          </div>
+        <div class="gallery-text">
+            <h2>Dussehra Celebration</h2>
+          <p>Our team came together to celebrate Dussehra, a festival that symbolizes the victory of good over evil. It was a joyous occasion filled with fun, laughter, and camaraderie. We believe in celebrating our culture and traditions as a team, strengthening our bonds and enhancing our collaborative spirit.</p>
         </div>
       </div>
     </section>
-    <section class="collaboration-container">
-      <h2>Proudly collaborating with</h2>
-      <div class="collaboration-subcontainer">
-        <a href="https://dst.gov.in/" class="collaboration-item" target="_blank">
-          <img src="image1.jpg" alt="Collaboration 1">
-        </a>
-        <a href="https://www.iitkgp.ac.in/" class="collaboration-item" target="_blank">
-          <img src="image2.jpg" alt="Collaboration 2">
-        </a>
-        <a href="https://www.ictmumbai.edu.in/" class="collaboration-item" target="_blank">
-          <img src="image3.jpg" alt="Collaboration 3">
-        </a>
-        <a href="https://vit.ac.in/" class="collaboration-item" target="_blank">
-          <img src="image4.jpg" alt="Collaboration 4">
-        </a>
-        <a href="https://www.iitb.ac.in/" class="collaboration-item" target="_blank">
-          <img src="image5.jpg" alt="Collaboration 5">
-        </a>
-        <a href="https://www.barc.gov.in/" class="collaboration-item" target="_blank">
-          <img src="image6.jpg" alt="Collaboration 6">
-        </a>
-        <a href="https://www.sgpgims.org.in/" class="collaboration-item" target="_blank">
-          <img src="image7.jpg" alt="Collaboration 7">
-        </a>
-        <a href="https://tmc.gov.in/About" class="collaboration-item" target="_blank">
-          <img src="image8.jpg" alt="Collaboration 8">
-        </a>
-        <a href="https://www.ncl-india.org/" class="collaboration-item" target="_blank">
-          <img src="image9.jpg" alt="Collaboration 9">
-        </a>
-        <a href="https://tmc.gov.in/Home" class="collaboration-item" target="_blank">
-          <img src="image10.jpg" alt="Collaboration 10">
-        </a>
-        <a href="https://www.icmr.gov.in/" class="collaboration-item" target="_blank">
-          <img src="image11.jpg" alt="Collaboration 11">
-        </a>
-        <a href="https://iocb.ictmumbai.edu.in/" class="collaboration-item" target="_blank">
-          <img src="image12.jpg" alt="Collaboration 12">
-        </a>
+    <section class="gallery-container">
+      <div class="gallery-item">
+        <div class="gallery-image">
+          <img src="NSRM_Participation.jpg" alt="NSRM Participation">
+        </div>
+        <div class="gallery-text">
+          <h2>Proud Participants of NSRM at ACTREC </h2>
+          <p>Our team is honored to contribute to the vibrant research ecosystem fostered at the National Symposium on Research Methodologies</p>
+        </div>
       </div>
-  </section>
-  
-  
-  <style>
-    /* Collaboration Section styles */
-    .collaboration-container {
-      padding: 20px 40px;
-      text-align: center;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-      margin-top: -30px;
-    }
-  
-    .collaboration-container.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  
-    .collaboration-container h2 {
-      color: #082233;
-      font-size: 2em;
-      margin-bottom: 25px;
-      font-family: 'Montserrat', sans-serif;
-    }
-  
-    .collaboration-subcontainer {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr); /* Four columns */
-      gap: 10px; /* Reduced gap between images */
-    }
-  
-    .collaboration-item {
-      overflow: hidden;
-      border-radius: 8px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      height: 100px; /* Adjusted fixed height for smaller images */
-    }
-  
-    .collaboration-item img {
-      width: 100%;
-      height: 100%; /* Fill the entire height */
-      object-fit: contain; /* Fit the image within the container */
-      border-radius: 8px;
-      transition: transform 0.3s ease;
-    }
-  
-    .collaboration-item:hover img {
-      transform: scale(1.05);
-    }
-  
-    .collaboration-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    }
-  </style>
+    </section>
+    <section class="gallery-container">
+      <div class="gallery-item">
+        <div class="gallery-image slideshow-container">
+          <img src="Celeb_cake_1.jpg" class="slide" alt="Award Celebration Image 2">
+          <img src="Award_Celeb.jpg" class="slide active" alt="Award Celebration Image 1">
+          <button class="prev" onclick="prevSlide()">&#10094;</button>
+          <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+        <div class="gallery-text">
+          <h2>Celebrating Excellence</h2>
+          <p>Our lab proudly celebrated a remarkable achievement as Dr. Puja Sandbhor received the <strong>Prime Minister’s 
+            Early Career Research Grant</strong> for her groundbreaking work in glioblastoma precision therapeutics. This honor recognizes our lab’s 
+            dedication to advancing 3D organoid models for studying tumor microenvironments and therapy resistance. A special thanks to <strong>ANRF, DST 
+            India, ACTREC-TMC</strong> for their support.
+            <br>Swipe through the moments from our celebration!</p>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+
   <!-- Footer -->
   <footer>
-    <p>&copy; 2024 TNB LAB. All rights reserved.</p>
+    <p>&copy; 2024 The TNB LAB. All rights reserved.</p>
   </footer>
-
-  <!-- JavaScript for Animation -->
   <script>
-    function animateOnScroll() {
-      const elements = document.querySelectorAll('.welcome-container, .inspiration-container');
-      elements.forEach((el) => {
-        const position = el.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        if (position < windowHeight - 100) {
-          el.classList.add('show');
-        }
-      });
-    }
-
-    window.addEventListener('scroll', animateOnScroll);
-    window.addEventListener('load', animateOnScroll);
-  </script>
-  <script>
-    function animateCollaborationSection() {
-      const collaborationSection = document.querySelector('.collaboration-container');
-      const position = collaborationSection.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-      if (position < windowHeight - 100) {
-        collaborationSection.classList.add('show');
-      }
-    }
+  function animateOnScroll() {
+    const galleryContainers = document.querySelectorAll('.gallery-container'); // Select all containers
+    const windowHeight = window.innerHeight;
   
-    window.addEventListener('scroll', animateCollaborationSection);
-    window.addEventListener('load', animateCollaborationSection);
-  </script>
-
-<script>
-  function toggleDropdown() {
-      var dropdown = document.getElementById("news-dropdown");
-      dropdown.classList.toggle("show");
+    galleryContainers.forEach(container => {
+      const position = container.getBoundingClientRect().top;
+  
+      if (position < windowHeight - 100) {
+        container.classList.add('show'); // Add the show class to each container when it's in view
+      }
+    });
   }
+  
+  window.addEventListener('scroll', animateOnScroll);
+  window.addEventListener('load', animateOnScroll);
+let slideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) {
+            slide.classList.add('active');
+        }
+    });
+}
+
+function nextSlide() {
+    slideIndex = (slideIndex + 1) % slides.length;
+    showSlide(slideIndex);
+}
+
+function prevSlide() {
+    slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+    showSlide(slideIndex);
+}
+
   </script>
   
 </body>
 </html>
-

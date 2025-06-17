@@ -177,6 +177,41 @@
   color: #444;
   margin: 0;
 }
+     nav ul li {
+  position: relative; /* Add this to enable absolute positioning of the dropdown */
+}
+nav ul li:hover .dropdown {
+  display: block;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #e7e7e7; /* Light grey background */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1000;
+  top: 100%; /* Positions it below the News item */
+  left: -40px; /* Aligns it with the News item */
+  width: 150px; /* Smaller dropdown width */
+  text-align: center;
+}
+
+.dropdown a {
+  color: #082233;
+  font-size: 0.8em; /* Slightly smaller text size */
+  padding: 8px 8px; /* Reduced padding */
+  display: block;
+  text-align: center;
+}
+
+.dropdown a:hover {
+  background-color: #bbbbbb; /* Dark grey background on hover */
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
 
 
     footer {
@@ -211,13 +246,27 @@
   <header>
     <nav>
       <ul>
-        <li><a href="index.html" id="home-link">Home</a></li>
-        <li><a href="research.html" id="research-link">Research</a></li>
-        <li><a href="team.html" id="team-link">Team</a></li>
-        <li><a href="publications.html" id="publications-link">Publications</a></li>
-        <li><a href="news.html" id="news-link" class="active">News</a></li>
-        <li><a href="gallery.html" id="gallery-link">Gallery</a></li>
-        <li><a href="contact.html" id="contact-link">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li>
+          <a href="team.html">Team</a>
+          <div class="dropdown">
+            <a href="team.html">Principal</a>
+            <a href="team.html">Team</a>
+            <a href="alumni.html">Alumni</a>
+          </div>
+        </li>
+        <li><a href="publications.html">Publications</a></li>
+        <li>
+          <a href="news.html" class="active">News</a>
+          <div class="dropdown">
+            <a href="media.html">Media</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="new_positions.html">New Positions</a>
+          </div>
+        </li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -250,6 +299,21 @@
 
     <div class="timeline">
       <div class="timeline-item">
+        <div class="timeline-item-date">April 2025</div>
+        <div class="timeline-item-content">
+          <ul>
+               <li>
+                  Immune response recalibration using immunotherapy and biomimetic nano-therapy against high-grade gliomas and brain metastases.
+                  <br>~ Sandhbor, P., John, G., Bhat, S., & Goda, J. S.
+                  <br> Asian journal of pharmaceutical sciences, 20(2), 101021. 
+                  <a href="https://doi.org/10.1016/j.ajps.2025.101021" target="_blank" rel="noopener noreferrer">
+                    <i>https://doi.org/10.1016/j.ajps.2025.101021</i>
+                  </a>
+</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
         <div class="timeline-item-date">December 2024</div>
         <div class="timeline-item-content">
           <ul>
@@ -276,7 +340,7 @@
         <div class="timeline-item-content">
           <ul>
             <li>Bio-polymeric transferrin-targeted temozolomide nanoparticles in gel for post-surgical GBM therapy. 
-                <i>Nanoscale,</i> 2022;14(35):12773-12788. doi:10.1039/d2nr00171c</li>
+                Nanoscale, 2022;14(35):12773-12788. doi:10.1039/d2nr00171c</li>
             <li>Spatial specific delivery of combinational chemotherapeutics to combat intratumoral heterogeneity. <br>J Control
                 Release. 2022;348:1004-1015. doi:10.1016/j.jconrel.2022.06.046</li>
           </ul>

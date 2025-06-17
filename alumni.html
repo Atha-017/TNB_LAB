@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alumni - TNB Lab</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+    }
+
+    header {
+      background-color: #082233;
+      color: white;
+      padding: 30px;
+      text-align: left;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 30px;
+      font-size: 1.4em;
+      position: relative;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
+
+    nav ul li:hover .dropdown {
+      display: block;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      background-color: #e7e7e7;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      overflow: hidden;
+      z-index: 1000;
+      top: 100%;
+      left: -40px;
+      width: 150px;
+      text-align: center;
+    }
+
+    .dropdown a {
+      color: #082233;
+      font-size: 0.8em;
+      padding: 8px 8px;
+      display: block;
+      text-align: center;
+    }
+
+    .dropdown a:hover {
+      background-color: #bbbbbb;
+      color: rgb(0, 0, 0);
+    }
+
+    main {
+      padding: 25px;
+    }
+
+    .alumni-section {
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .alumni-photo {
+  width: 180px; /* increased from 130px */
+  height: 210px; /* increased from 150px */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-right: 25px;
+}
+
+.alumni-horizontal {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 30px;
+}
+
+.alumni-horizontal .alumni-info {
+  flex-grow: 1;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.alumni-info h2,
+.alumni-info h5,
+.alumni-info p {
+  text-align: left;
+  margin: 5px 0;
+  width: 100%; /* full width inside info box */
+}
+
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      margin-block-start: 0.67em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background-color: #082233;
+      color: white;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    @media (max-width: 600px) {
+      .alumni-photo {
+        width: 80px;
+        height: 80px;
+      }
+
+      .alumni-horizontal {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .alumni-horizontal .alumni-photo {
+        margin: 0 0 10px 0;
+      }
+
+      .alumni-horizontal .alumni-info {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header and Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li>
+          <a href="team.html">Team</a>
+          <div class="dropdown">
+            <a href="team.html">Principal</a>
+            <a href="team.html">Team</a>
+            <a href="alumni.html">Alumni</a>
+          </div>
+        </li>
+        <li><a href="publications.html">Publications</a></li>
+        <li>
+          <a href="news.html" class="active">News</a>
+          <div class="dropdown">
+            <a href="media.html">Media</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="new_positions.html">New Positions</a>
+          </div>
+        </li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Spacing below header -->
+  <div style="margin-top: 40px;"></div>
+
+  <!-- Light grey heading -->
+  <div style="background-color: #f0f0f0; padding: 15px; text-align: left;">
+    <h1 style="margin: 0; font-size: 1.8em;">Alumni</h1>
+  </div>
+
+  <!-- Alumni Section -->
+  <main>
+    <section class="alumni-section alumni-horizontal">
+      <img src="ghag.jpg" alt="Shubham Ghag" class="alumni-photo">
+      <div class="alumni-info">
+        <h2>Shubham Ghag</h2>
+        <h5>M.Sc. Biotechnology Dissertation Trainee 2025</h5>
+        <p>
+          Shubham Ghag joined the Translational Nanomedicine and Bioengineering Lab in 2024 as a dissertation trainee.
+          He is pursuing his M.Sc. in Biotechnology from Ramnarain Ruia Autonomous College, affiliated with Mumbai University.
+          His research focused on developing novel nano-platforms for brain cancer therapeutics, aiming to advance targeted treatment strategies.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 The TNB LAB. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
